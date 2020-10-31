@@ -2,8 +2,7 @@ from traceback import print_exc
 from typing import Callable, Dict
 
 from linebot.models import (
-    Event, MessageEvent, FollowEvent, JoinEvent, PostbackEvent, BeaconEvent, MemberJoinedEvent, AccountLinkEvent,
-    ThingsEvent
+    Event
 )
 
 

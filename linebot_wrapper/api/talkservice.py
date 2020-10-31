@@ -1,7 +1,6 @@
 from typing import Union, List
 
-from linebot import LineBotApi
-from linebot.models import SendMessage, TextSendMessage, ImageSendMessage, VideoSendMessage
+from linebot.models import SendMessage, TextSendMessage
 
 from .struct import VideoMessage, ImageMessage, TextMessage
 

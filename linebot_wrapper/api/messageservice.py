@@ -22,7 +22,7 @@ class MessageService:
 
     def reply_message_base(self, messages: Union[SendMessage, List[SendMessage]]):
         """Reply Message
-        LINEからできたEventに対する返信を行います
+        Respond to events from users, groups, and rooms.
         :param messages: Message object which you want to send
         :return: None
         """
@@ -97,16 +97,33 @@ class MessageService:
         )
 
     def push_message(self, to: str, *messages: message_types):
+        """
+        Send messages to users, groups, and rooms at any time.
+        :param to:
+        :param messages:
+        :return:
+        """
         self.api.push_message(to,
             [message.create_message() for message in messages]
         )
 
     def multicast(self, uids: Union[str, List[str]], *messages: message_types):
+        """
+        Send push messages to multiple users at any time. Messages cannot be sent to groups or rooms.
+        :param uids:
+        :param messages:
+        :return:
+        """
         self.api.multicast(uids,
             [message.create_message() for message in messages]
         )
 
     def broadcast(self, *messages: message_types):
+        """
+        Send push messages to multiple users at any time.
+        :param messages:
+        :return:
+        """
         self.api.broadcast(
             [message.create_message() for message in messages]
         )

@@ -32,26 +32,26 @@ class PollService:
         """
         self.reply_token = getattr(op, "reply_token")
 
-    def execute_func(self, op: Event):
+    def execute_func(self, op_type: OpType):
         """func executer
-        :param op: parsed Event from Webhook
+        :param op_type: parsed Event from Webhook
         :return: None
         """
         try:
-            self.op_interrupts[op.type](self.api, op)
+            self.op_interrupts[op_type](self, op_type)
         except Exception:
             print_exc()
 
-    def add_op_interrupt(self, op: Event, func: Callable):
+    def add_op_interrupt(self, op_type: OpType, func: Callable):
         """ Add Event to handler
-        :param op: Event which you want to handle
+        :param op_type: Event which you want to handle
         :param func: Function which you want to call
         :return: None
         """
-        assert op.type not in self.op_interrupts, f"{op.type} is already added to interrupts"
-        self.op_interrupts[op.type] = func
+        assert op_type not in self.op_interrupts, f"{op_type} is already added to interrupts"
+        self.op_interrupts[op_type] = func
 
-    def add_op_interrupts(self, dicts: Dict[Event, Callable]):
+    def add_op_interrupts(self, dicts: Dict[OpType, Callable]):
         """Add Events to handler
         :param dicts: Dict[Event, func]
         :return: None

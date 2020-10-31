@@ -30,7 +30,7 @@ class MessageService:
             self.reply_token, messages
         )
 
-    def reply_message(self, *messages: Union[VideoMessage, ImageMessage, TextMessage, AudioMessage, LocationMessage, StickerMessage]):
+    def reply_message(self, *messages: message_types):
         self.reply_message_base(
             [message.create_message() for message in messages]
         )

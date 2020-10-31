@@ -38,7 +38,7 @@ class PollService:
         :return: None
         """
         try:
-            self.op_interrupts[op.type](self.bot, op)
+            self.op_interrupts[op.type](self.api, op)
         except Exception:
             print_exc()
 

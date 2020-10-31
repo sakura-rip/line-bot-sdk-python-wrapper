@@ -1,3 +1,11 @@
+from typing import Union, List
+
+from linebot import LineBotApi
+from linebot.models import SendMessage, TextSendMessage, ImageSendMessage, VideoSendMessage
+
+from .struct import VideoMessage, ImageMessage, TextMessage
+
+
 class TalkService:
     def __init__(self):
         self.reply_token = None

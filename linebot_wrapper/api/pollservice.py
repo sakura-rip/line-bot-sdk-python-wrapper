@@ -1,7 +1,10 @@
 from traceback import print_exc
 from typing import Callable, Dict
 
-from linebot.models.events import Event
+from linebot.models import (
+    Event, MessageEvent, FollowEvent, JoinEvent, PostbackEvent, BeaconEvent, MemberJoinedEvent, AccountLinkEvent,
+    ThingsEvent
+)
 
 
 class PollService:
@@ -19,7 +22,21 @@ class PollService:
         for op in ops:
             if op.type not in self.op_interrupts:
                 continue
+            self.set_reply_token(op)
             self.execute_func(op)
+
+    def set_reply_token(self, op: Event):
+        """
+        set reply token for talk Service
+        :param op: Event
+        :return: None
+        """
+        if op.type in [MessageEvent, FollowEvent, JoinEvent,
+                       PostbackEvent, BeaconEvent, MemberJoinedEvent,
+                       AccountLinkEvent, ThingsEvent]:
+            self.reply_token = op.reply_token
+            return
+        self.reply_token = None
 
     def execute_func(self, op: Event):
         """func executer

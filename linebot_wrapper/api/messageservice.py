@@ -26,7 +26,7 @@ class MessageService:
         :param messages: Message object which you want to send
         :return: None
         """
-        self.bot.reply_message(
+        self.api.reply_message(
             self.reply_token, messages
         )
 
@@ -97,16 +97,16 @@ class MessageService:
         )
 
     def push_message(self, to: str, *messages: message_types):
-        self.bot.push_message(to,
+        self.api.push_message(to,
             [message.create_message() for message in messages]
         )
 
     def multicast(self, uids: Union[str, List[str]], *messages: message_types):
-        self.bot.multicast(uids,
+        self.api.multicast(uids,
             [message.create_message() for message in messages]
         )
 
     def broadcast(self, *messages: message_types):
-        self.bot.broadcast(
+        self.api.broadcast(
             [message.create_message() for message in messages]
         )

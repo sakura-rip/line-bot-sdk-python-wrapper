@@ -1,3 +1,4 @@
+import warnings
 from traceback import print_exc
 from typing import Callable, Dict
 
@@ -50,7 +51,9 @@ class PollService:
         :param func: Function which you want to call
         :return: None
         """
-        assert op_type not in self.op_interrupts, f"{op_type} is already added to interrupts"
+        if op_type in self.op_interrupts:
+            warnings.warn(f"{op_type} is already added to interrupts", stacklevel=2)
+
         self.op_interrupts[op_type] = func
 
     def add_op_interrupts(self, dicts: Dict[OpType, Callable]):

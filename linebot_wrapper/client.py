@@ -2,9 +2,10 @@ from linebot import LineBotApi, WebhookParser
 
 from .api.pollservice import PollService
 from .api.messageservice import MessageService
+from .api.utilservice import UtilService
 
 
-class LineClient(MessageService, PollService, LineBotApi):
+class LineClient(MessageService, PollService, LineBotApi, UtilService):
     def __init__(self, access_token: str, secret: str):
         self.api = LineBotApi(access_token)
         self.parser = WebhookParser(secret)

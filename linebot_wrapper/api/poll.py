@@ -46,4 +46,4 @@ class Poll:
         :return: None
         """
         for event, fnc in dicts.items():
-            self.op_interrupts[event.type] = fnc
+            self.add_op_interrupt(event, fnc)

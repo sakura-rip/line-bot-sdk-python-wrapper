@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a67e5956-b36b-4e02-9633-da6504487b58" name="Default Changelist" comment="" />
+    <list default="true" id="0dec87c4-ae2e-45c2-8cff-893618071291" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/thriftCompiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/thriftCompiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linebot_wrapper/api/poll.py" beforeDir="false" afterPath="$PROJECT_DIR$/linebot_wrapper/api/poll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linebot_wrapper/api/talk.py" beforeDir="false" afterPath="$PROJECT_DIR$/linebot_wrapper/api/talk.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,29 +18,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1jXmfBiTZSBhzTQ5xocgOAmeb5o" />
+  <component name="ProjectId" id="1jdK0CS8OYuNYd9Wm0d1Ke0q4T1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="line-bot-sdk-python-wrapper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_HOME" value="C:\Users\kumo6\.virtualenvs\line-bot-sdk-python-wrapper-CcOWERYG\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -54,50 +53,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a67e5956-b36b-4e02-9633-da6504487b58" name="Default Changelist" comment="" />
-      <created>1603958912231</created>
+      <changelist id="0dec87c4-ae2e-45c2-8cff-893618071291" name="Default Changelist" comment="" />
+      <created>1604128302641</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1603958912231</updated>
+      <updated>1604128302641</updated>
     </task>
-    <task id="LOCAL-00001" summary="init: pycharm's setting file">
-      <created>1603959157392</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1603959157392</updated>
-    </task>
-    <task id="LOCAL-00002" summary="init: pycharm's setting file">
-      <created>1603959167355</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1603959167355</updated>
-    </task>
-    <task id="LOCAL-00003" summary="init: pipenv file">
-      <created>1603959180231</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1603959180231</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="init: pycharm's setting file" />
-    <MESSAGE value="init: pipenv file" />
-    <option name="LAST_COMMIT_MESSAGE" value="init: pipenv file" />
+  <component name="WindowStateProjectService">
+    <state x="447" y="191" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604128354337">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="447" y="191" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604128354337" />
   </component>
 </project>

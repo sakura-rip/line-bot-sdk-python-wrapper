@@ -4,7 +4,7 @@ from typing import Callable, Dict
 from linebot.models.events import Event
 
 
-class Poll:
+class PollService:
     def __init__(self):
         self.op_interrupts = {}
 

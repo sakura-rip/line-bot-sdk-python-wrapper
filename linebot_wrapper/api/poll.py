@@ -26,7 +26,6 @@ class Poll:
         :param op: parsed Event from Webhook
         :return: None
         """
-        assert op.type not in self.op_interrupts, f"{op.type} is already added to interrupts"
         try:
             self.op_interrupts[op.type](self.bot, op)
         except Exception:
@@ -38,6 +37,7 @@ class Poll:
         :param func: Function which you want to call
         :return: None
         """
+        assert op.type not in self.op_interrupts, f"{op.type} is already added to interrupts"
         self.op_interrupts[op.type] = func
 
     def add_op_interrupts(self, dicts: Dict[Event, Callable]):

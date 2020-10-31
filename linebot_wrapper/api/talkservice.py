@@ -12,7 +12,7 @@ class TalkService:
     def reply_message_base(self, messages: Union[SendMessage, List[SendMessage]]):
         """Reply Message
         LINEからできたEventに対する返信を行います
-        :param messages: Message object which you want to sent
+        :param messages: Message object which you want to send
         :return: None
         """
         self.bot.reply_message(

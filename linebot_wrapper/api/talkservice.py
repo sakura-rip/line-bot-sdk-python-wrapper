@@ -2,7 +2,7 @@ from typing import Union, List
 
 from linebot.models import SendMessage, TextSendMessage
 
-from .struct import VideoMessage, ImageMessage, TextMessage
+from .message_struct import VideoMessage, ImageMessage, TextMessage, AudioMessage, LocationMessage, StickerMessage
 
 
 class TalkService:

@@ -2,10 +2,9 @@ from flask import Flask, request, abort
 from linebot.exceptions import (
     InvalidSignatureError
 )
-from linebot.models.events import (
-    MessageEvent
-)
+
 from linebot_wrapper import LineClient
+from linebot_wrapper.ttype import OpType
 
 client = LineClient(
     "AccessToken",
@@ -19,7 +18,7 @@ def receive_message(bot, op):
     bot.reply_text("hello world")
 
 
-client.add_op_interrupt(MessageEvent, receive_message)
+client.add_op_interrupt(OpType.RECEIVE_MESSAGE, receive_message)
 
 
 @app.route("/callback", methods=['POST'])
@@ -41,4 +40,4 @@ def callback():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port="5000", debug=True)

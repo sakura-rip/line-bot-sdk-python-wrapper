@@ -5,6 +5,8 @@ from linebot.models import (
     Event
 )
 
+from linebot_wrapper.ttype import OpType
+
 
 class PollService:
     def __init__(self):

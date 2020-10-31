@@ -95,3 +95,18 @@ class MessageService:
         self.reply_message_base(
             [sticker.create_message() for sticker in stickers]
         )
+
+    def push_message(self, to: str, *messages: message_types):
+        self.bot.push_message(to,
+            [message.create_message() for message in messages]
+        )
+
+    def multicast(self, uids: Union[str, List[str]], *messages: message_types):
+        self.bot.multicast(uids,
+            [message.create_message() for message in messages]
+        )
+
+    def broadcast(self, *messages: message_types):
+        self.bot.broadcast(
+            [message.create_message() for message in messages]
+        )

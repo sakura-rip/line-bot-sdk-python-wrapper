@@ -56,16 +56,31 @@ class TalkService:
         )
 
     def reply_audio(self, *audios: Union[AudioMessage, List[AudioMessage]]):
+        """
+        Reply audio message
+        :param audios: AudioMessage object which you want to send
+        :return:
+        """
         self.reply_message_base(
             [audio.create_message() for audio in audios]
         )
 
     def reply_location(self, *locations: Union[LocationMessage, List[LocationMessage]]):
+        """
+        Reply location message
+        :param locations: LocationMessage object which you want to send
+        :return:
+        """
         self.reply_message_base(
             [location.create_message() for location in locations]
         )
 
     def reply_sticker(self, *stickers: Union[StickerMessage, List[StickerMessage]]):
+        """
+        Reply sticker message
+        :param stickers: StickerMessage object which you want to send
+        :return:
+        """
         self.reply_message_base(
             [sticker.create_message() for sticker in stickers]
         )

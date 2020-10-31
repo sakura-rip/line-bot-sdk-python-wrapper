@@ -1,7 +1,14 @@
 from dataclasses import dataclass
 
-from linebot.models import ImageSendMessage, QuickReply, VideoSendMessage, TextSendMessage, AudioSendMessage, \
-    LocationSendMessage, StickerSendMessage
+from linebot.models import (
+    ImageSendMessage,
+    QuickReply,
+    VideoSendMessage,
+    TextSendMessage,
+    AudioSendMessage,
+    LocationSendMessage,
+    StickerSendMessage
+)
 
 
 @dataclass

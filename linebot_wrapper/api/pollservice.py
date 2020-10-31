@@ -22,7 +22,7 @@ class PollService:
             if op.type not in self.op_interrupts:
                 continue
             self.set_reply_token(op)
-            self.execute_func(op)
+            self.execute_func(op.type)
 
     def set_reply_token(self, op: Event):
         """

@@ -19,6 +19,11 @@ class TalkService:
             self.reply_token, messages
         )
 
+    def reply_message(self, *messages: Union[VideoMessage, ImageMessage, TextMessage, AudioMessage, LocationMessage, StickerMessage]):
+        self.reply_message_base(
+            [message.create_message() for message in messages]
+        )
+
     def reply_text(self, *texts: Union[str, List[str], TextMessage, List[TextMessage]]):
         """
         Reply text message

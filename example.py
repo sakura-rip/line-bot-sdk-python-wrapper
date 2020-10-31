@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 
 def receive_message(bot, op):
-    bot.reply_message("hello world")
+    bot.reply_text("hello world")
 
 
 client.add_op_interrupt(MessageEvent, receive_message)

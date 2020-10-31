@@ -22,9 +22,8 @@ class TalkService:
     def reply_text(self, *texts: Union[str, List[str], TextMessage, List[TextMessage]]):
         """
         Reply text message
-        :param texts:
-        :type
-        :return:
+        :param texts: Text object which you want to send
+        :return: None
         """
         self.reply_message(
             [TextSendMessage(text=text) if isinstance(text, str) else text.create_message()
@@ -32,11 +31,21 @@ class TalkService:
         )
 
     def reply_image(self, *images: Union[ImageMessage, List[ImageMessage]]):
+        """
+        Reply image message
+        :param images: ImageMessage object which you want to send
+        :return: None
+        """
         self.reply_message(
             [image.create_message() for image in images]
         )
 
     def reply_video(self, *videos: Union[VideoMessage, List[VideoMessage]]):
+        """
+        Reply video message
+        :param videos:  VideoMessage object which you want to send
+        :return: None
+        """
         self.reply_message(
             [video.create_message() for video in videos]
         )

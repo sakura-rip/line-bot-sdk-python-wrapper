@@ -49,3 +49,18 @@ class TalkService:
         self.reply_message(
             [video.create_message() for video in videos]
         )
+
+    def reply_audio(self, *audios: Union[AudioMessage, List[AudioMessage]]):
+        self.reply_message(
+            [audio.create_message() for audio in audios]
+        )
+
+    def reply_location(self, *locations: Union[LocationMessage, List[LocationMessage]]):
+        self.reply_message(
+            [location.create_message() for location in locations]
+        )
+
+    def reply_sticker(self, *stickers: Union[StickerMessage, List[StickerMessage]]):
+        self.reply_message(
+            [sticker.create_message() for sticker in stickers]
+        )

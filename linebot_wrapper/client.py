@@ -1,6 +1,9 @@
-from .api.talk import Talk
+from linebot import LineBotApi, WebhookParser
+
+from .api.talk import Talk, Poll
 
 
-class LineClient(Talk):
-    def __init__(self, channel_access_token: str, channel_secret: str):
-        pass
+class LineClient(Talk, Poll):
+    def __init__(self, access_token: str, secret: str):
+        self.bot = LineBotApi(access_token)
+        self.parser = WebhookParser(secret)

@@ -1,6 +1,6 @@
 from linebot.models import Event
 
-from linebot_wrapper.api.chat_struct import ToType
+from linebot_wrapper.ttype import ToType
 
 
 class UtilService:

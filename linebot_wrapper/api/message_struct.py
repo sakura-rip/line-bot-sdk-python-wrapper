@@ -96,3 +96,12 @@ class StickerMessage:
             sticker_id=self.sticker_id,
             quick_reply=self.quick_reply
         )
+
+
+message_types = Union[
+    VideoMessage, ImageMessage, TextMessage, AudioMessage,
+    LocationMessage, StickerMessage, List[VideoMessage], List[ImageMessage],
+    List[TextMessage], List[AudioMessage], List[LocationMessage], List[StickerMessage],
+    Tuple[VideoMessage], Tuple[ImageMessage], Tuple[TextMessage], Tuple[AudioMessage],
+    Tuple[LocationMessage], Tuple[StickerMessage]
+]

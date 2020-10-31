@@ -37,7 +37,7 @@ class ImageMessage:
 
     def create_message(self):
         return ImageSendMessage(
-            riginal_content_url=self.content_url,
+            original_content_url=self.content_url,
             preview_image_url=self.preview_url,
             quick_reply=self.quick_reply
         )

@@ -16,7 +16,7 @@ from .message_struct import (
 )
 
 
-class TalkService:
+class MessageService:
     def __init__(self):
         self.reply_token = None
 

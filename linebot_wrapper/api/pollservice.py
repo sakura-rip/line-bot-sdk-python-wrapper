@@ -31,12 +31,7 @@ class PollService:
         :param op: Event
         :return: None
         """
-        if op.type in [MessageEvent, FollowEvent, JoinEvent,
-                       PostbackEvent, BeaconEvent, MemberJoinedEvent,
-                       AccountLinkEvent, ThingsEvent]:
-            self.reply_token = op.reply_token
-            return
-        self.reply_token = None
+        self.reply_token = getattr(op, "reply_token")
 
     def execute_func(self, op: Event):
         """func executer

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import List, Tuple, Union
 
 from linebot.models import (
     ImageSendMessage,

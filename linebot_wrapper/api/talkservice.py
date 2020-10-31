@@ -1,8 +1,19 @@
 from typing import Union, List
 
-from linebot.models import SendMessage, TextSendMessage
+from linebot.models import (
+    SendMessage,
+    TextSendMessage
+)
 
-from .message_struct import VideoMessage, ImageMessage, TextMessage, AudioMessage, LocationMessage, StickerMessage
+from .message_struct import (
+    VideoMessage,
+    ImageMessage,
+    TextMessage,
+    AudioMessage,
+    LocationMessage,
+    StickerMessage,
+    message_types
+)
 
 
 class TalkService:

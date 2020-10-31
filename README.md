@@ -31,6 +31,8 @@ bot.reply_video(video)
 ```
 And so on.
 
+
+### Other
 You can use [original's](https://github.com/line/line-bot-sdk-python) function(e.g, `unlink_rich_menu_from_user`)
 
 Example:\

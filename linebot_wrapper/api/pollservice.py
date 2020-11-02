@@ -8,10 +8,12 @@ from linebot.models import (
 
 from linebot_wrapper.ttype import OpType
 
+from linebot import WebhookParser
 
 class PollService:
-    def __init__(self):
+    def __init__(self, secret: str):
         self.op_interrupts = {}
+        self.parser = WebhookParser(secret)
 
     def handle_operation(self, body: str, signature: str):
         """Operation Handler

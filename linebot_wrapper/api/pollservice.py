@@ -25,7 +25,7 @@ class PollService:
             if op.type not in self.op_interrupts:
                 continue
             self.set_reply_token(op)
-            self.execute_func(op.type)
+            self.execute_func(op)
 
     def set_reply_token(self, op: Event):
         """
@@ -35,13 +35,13 @@ class PollService:
         """
         self.reply_token = getattr(op, "reply_token")
 
-    def execute_func(self, op_type: OpType):
+    def execute_func(self, op: Event):
         """func executer
         :param op_type: parsed Event from Webhook
         :return: None
         """
         try:
-            self.op_interrupts[op_type](self, op_type)
+            self.op_interrupts[op.type](self, op)
         except Exception:
             print_exc()
 

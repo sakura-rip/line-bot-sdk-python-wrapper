@@ -42,3 +42,10 @@ class UtilService:
             f_name = f"{message_id}.{content.content_type.split('/')[1]}"
         with open(f_name, "wb") as f:
             f.write(content.content)
+
+    def get_mentioned_user_id(self, event: Event):
+        if not event.message.mention:
+            return []
+        return [
+            men.user_id for men in event.message.mention.mentionees
+        ]
